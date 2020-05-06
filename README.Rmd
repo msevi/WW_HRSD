@@ -8,17 +8,15 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## About
-The overall goal of hybrid assembly is to combine short and long reads to improve contiguity.  
+The overall goal of hybrid assembly is to combine short and long reads to improve contiguity and retrieve better quality genomes.  
 
 Short reads:  
-
 * Cheap  
 * Accurate  
 * Small contig size  
 * Gaps  
     
 Long reads:  
-
 * Relative inexpensive  
 * High error rate
 
@@ -48,3 +46,5 @@ Long read:
 Basecalling with guppy was performed on google cloud by Chris and commands to set it up can be found [here](https://gist.github.com/chrisLanderson/3f8443e5ab837c14c2249102343b6587){target="blank_"}
 
 The basecaller automatically trims all the adapter sequences and it removes sequences with a mean Q < 7, plus maybe a few other things. Usually these reads are ready for most downstream processes.
+
+UPDATE: A new version of the guppy basecaller was released, I will attempt basecalling using Chris' setup outlined above with the new version. 

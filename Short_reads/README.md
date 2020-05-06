@@ -45,6 +45,8 @@ fastp --thread 20
 Contaminant removal: Univec
 ---------------------------
 
+Screen for vector contamination using <a href="https://www.ncbi.nlm.nih.gov/tools/vecscreen/univec/" target="blank_">Univec</a>
+
 ``` bash
 #### Index database #### 
 bwa index UniVec 
