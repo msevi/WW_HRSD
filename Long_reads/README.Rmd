@@ -104,7 +104,7 @@ gsutil -m cp -r gs://long_read_fne/ fne/
 
 gsutil -m cp -r gs://last_eff/ last_eff/
 gsutil -m cp -r gs://nano_raw/ raw/
-
+Operation completed over 2.1k objects/282.9 GiB.   
 
 
 ```
@@ -185,6 +185,39 @@ ont-guppy/bin/guppy_basecaller -i last_eff/last_eff/VIP_NGS_Nano_WGS_2019_10_02/
 
 <!-- Found 1756 fast5 files to process. -->
 
+<!-- Caller time: 50976173 ms, Samples called: 141453337631, samples/s: 2.77489e+06 -->
+<!-- Finishing up any open output files. -->
+<!-- Basecalling completed successfully. -->
+
+
+ont-guppy/bin/guppy_basecaller -i raw/nano_raw/VIP_NGS_Nano_WGS_2019_12_10/VIP_NGS_RW-1_112019/20191210_2033_MN30472_FAK80197_fe25b131/fast5/ -s out/raw/raw_fastq -c dna_r9.4.1_450bps_hac.cfg -x "cuda:0" --progress_stats_frequency 60 --compress_fastq --cpu_threads_per_caller=2
+
+<!-- ONT Guppy basecalling software version 3.6.0+98ff765, client-server API version 1.1.0 -->
+<!-- config file:        /home/m.sevillano/ont-guppy/data/dna_r9.4.1_450bps_hac.cfg -->
+<!-- model file:         /home/m.sevillano/ont-guppy/data/template_r9.4.1_450bps_hac.jsn -->
+<!-- input path:         raw/nano_raw/VIP_NGS_Nano_WGS_2019_12_10/VIP_NGS_RW-1_112019/20191210_2033_MN30472_FAK80197_fe25b131/fast5/ -->
+<!-- save path:          out/raw/raw_fastq -->
+<!-- chunk size:         2000 -->
+<!-- chunks per runner:  512 -->
+<!-- records per file:   4000 -->
+<!-- fastq compression:  ON -->
+<!-- num basecallers:    4 -->
+<!-- gpu device:         cuda:0 -->
+<!-- kernel path:         -->
+<!-- runners per device: 4 -->
+
+<!-- Found 2138 fast5 files to process. -->
+
 
 ```
+
+## Transfer results back to discovery
+```{bash eval=FALSE}
+scp -r first m.sevi@xfer.discovery.neu.edu:/scratch/m.sevi/processing/WW_HRSD/data/long/basecalled_fq/
+scp -r fne m.sevi@xfer.discovery.neu.edu:/scratch/m.sevi/processing/WW_HRSD/data/long/basecalled_fq/
+scp -r last_eff m.sevi@xfer.discovery.neu.edu:/scratch/m.sevi/processing/WW_HRSD/data/long/basecalled_fq/
+scp -r raw m.sevi@xfer.discovery.neu.edu:/scratch/m.sevi/processing/WW_HRSD/data/long/basecalled_fq/
+```
+
+
 
