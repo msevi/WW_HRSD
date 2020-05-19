@@ -208,7 +208,9 @@ ont-guppy/bin/guppy_basecaller -i raw/nano_raw/VIP_NGS_Nano_WGS_2019_12_10/VIP_N
 
 <!-- Found 2138 fast5 files to process. -->
 
-
+<!-- Caller time: 62166166 ms, Samples called: 200834764353, samples/s: 3.23061e+06 -->
+<!-- Finishing up any open output files. -->
+<!-- Basecalling completed successfully. -->
 ```
 
 ## Transfer results back to discovery

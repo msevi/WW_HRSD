@@ -1,0 +1,21 @@
+---
+title: "Hybrid Assembly"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Assembly pipelines
+
+### MaSuRCA
+
+Check out [gitbhub](https://github.com/alekseyzimin/masurca){target="_blank"} from developers
+
+### Opera MS
+
+Check out [gitbhub](https://github.com/CSB5/OPERA-MS){target="_blank"} and [Nature paper](https://www.nature.com/articles/s41587-019-0191-2){target="_blank"}
+
+#### Installation
+https://github.com/CSB5/OPERA-MS/issues/38 

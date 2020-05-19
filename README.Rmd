@@ -1,5 +1,5 @@
 ---
-title: "Hybrid Assembly"
+title: "Overall information"
 output: github_document
 ---
 
@@ -48,3 +48,13 @@ Basecalling with guppy was performed on google cloud by Chris and commands to se
 The basecaller automatically trims all the adapter sequences and it removes sequences with a mean Q < 7, plus maybe a few other things. Usually these reads are ready for most downstream processes.
 
 UPDATE: A new version of the guppy basecaller was released, I will attempt basecalling using Chris' setup outlined above with the new version. 
+
+## Analyses tracks
+
+### Community
+### Microdiversity 
+
+DESMAN is a potential tool to get variant information from MAGs.
+Several tutorials, check out one from the [developers](https://github.com/chrisquince/StrainMetaSim){target="_blank"}, and an adaptation by [Ruben Prop](https://github.com/rprops/MetaG_analysis_workflow/wiki/21.-DESMAN){target="_blank"} from [Denef's lab](http://www-personal.umich.edu/~vdenef/index.htm) at UMICH.
+
+https://github.com/rprops/MetaG_analysis_workflow/wiki/21.-DESMAN
