@@ -1,5 +1,5 @@
 ---
-title: "Long read pre-processing"
+title: "Long read"
 output: github_document
 ---
 
@@ -221,5 +221,36 @@ scp -r last_eff m.sevi@xfer.discovery.neu.edu:/scratch/m.sevi/processing/WW_HRSD
 scp -r raw m.sevi@xfer.discovery.neu.edu:/scratch/m.sevi/processing/WW_HRSD/data/long/basecalled_fq/
 ```
 
+## QC reads
+
+A tool called LongQC was used to evaluate the quality of the long reads. More information can be found in the author's [github](https://github.com/yfukasawa/LongQC){target="_blank"}
+
+Another tool called NanoPlot was used. More info in the [github](https://github.com/wdecoster/NanoPlot){target="_blank"}.
 
 
+```{bash eval=FALSE}
+
+
+
+```
+
+## Pre processing
+
+No pre-processing of long read data was performed. https://github.com/marbl/canu/issues/1518
+Option for read filtering: https://github.com/rrwick/Filtlong
+
+## Assembly
+
+Flye was used to perform single assembly of long reads. It is based on underlying repeat graphs data structure that tolerate more noise as opposed to DeBruijn graphs.  
+
+'Should I use raw or error-corrected reads?  
+Flye was designed and tested mainly using raw reads, so it is currently the recommended option.'  
+"How do I select genome size if I don't know it in advance?
+The genome size estimate is used for solid k-mer selection in the initial disjointig assembly stage. Flye is not very sensitive to this parameter, and the estimate could be rough. It is ok if the parameter is within 0.5x-2x of the actual genome size. If the final assembly size is very different from the initial guess, consider re-running the pipeline with an updated estimate for better results.  
+
+An alternative option is to run Flye in --meta mode, which uses a different approach for solid k-mer selection. This mode is almost independent from the genome size parameter (you still need to provide an estimate for the selection of some other parameters). When assembly is completed, you can re-run in the normal mode with the inferred genome size."  
+
+A comparative study of long reads assemblies reccommends Flye over Canu for **metagenomes**. Their benchmarking results can be found on their [github](https://github.com/adlape95/Assembly-methods-nanopore){target="_blank"}  
+
+Other options for assembly:
+* pipeline: https://www.forbes.com/sites/sergeiklebnikov/2020/06/17/20-year-old-robinhood-customer-dies-by-suicide-after-seeing-a-730000-negative-balance/#896d67816384  

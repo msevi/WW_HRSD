@@ -16,8 +16,8 @@ Long reads:
 \* Relative inexpensive
 \* High error rate
 
-Data description
-----------------
+Data description (EDIT: metadata from Raul)
+-------------------------------------------
 
 Bi-monthly sampling of Virginia Initiative Plant of raw influent and treated effluent.
 
