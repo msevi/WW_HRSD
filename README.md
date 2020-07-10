@@ -48,6 +48,8 @@ The basecaller automatically trims all the adapter sequences and it removes sequ
 
 UPDATE: A new version of the guppy basecaller was released, I performed basecalling using Chris' setup outlined above with the new version, a detailed procedure can be found under Long\_reads folder.
 
+![](README_files/figure-markdown_github/tweet-from-cbrown-1.png)
+
 Analyses tracks
 ---------------
 
